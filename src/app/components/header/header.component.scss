@@ -1,0 +1,36 @@
+.header-container {
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    background: rgb(7, 71, 166);
+}
+
+.header-title {
+    font-family: 'MontSerrat';
+    font-size: 25px;
+    font-weight: bolder;
+    color: #f8f8fa;
+    text-align: center;
+}
+
+.header-selector {
+    width: 100%;
+    display: flex;
+    
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+.selector-button {
+    width: 40%;
+    outline: none;
+    border: none;
+    background: #F8F8FA;
+    padding: 10px;
+
+    font-size: 15px;
+}
