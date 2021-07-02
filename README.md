@@ -1,5 +1,16 @@
 # Randomanimals
 
+## O que é este projeto
+
+Projeto por diversão, não pretendo me apropriar de qualquer imagem utilizada ou tomar créditos
+pela api consumida, links abaixos para o criador:
+
+https://documenter.getpostman.com/view/4016432/RWToRJCq
+
+https://dog.ceo/dog-api/
+
+# Woh was made
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.1.
 
 ## Development server
