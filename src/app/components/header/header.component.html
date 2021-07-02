@@ -5,11 +5,13 @@
     </h1>
     
     <div class="header-selector">
-        <button class="selector-button">
+        <button class="selector-button"
+                (click)="navigateToSection('dog')">
             Doginhos
         </button>
 
-        <button class="selector-button">
+        <button class="selector-button"
+                (click)="navigateToSection('cat')">
             Gatitos
         </button>
     </div>

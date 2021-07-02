@@ -38,11 +38,11 @@ export class AnimalService {
     return value <= 0.5 ? "cat" : "dog"
   }
 
-  private getCatImage(){
+  public getCatImage(){
     return this.httpClient.get(this.randomCatApi);
   }
 
-  private getDogImage(){
+  public getDogImage(){
     return this.httpClient.get(this.randomDogApi);
   }
 }

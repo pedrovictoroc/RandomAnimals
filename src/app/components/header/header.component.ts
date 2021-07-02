@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Router } from "@angular/router"
 
 @Component({
   selector: 'app-header',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  @Output()
+  selectedAnimal = new EventEmitter()
+
+  constructor(
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  navigateToSection(animal: string){
+    this.selectedAnimal.emit(animal);
   }
 
 }
