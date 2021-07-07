@@ -1,4 +1,4 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, OnChanges, OnInit, Output } from '@angular/core';
 import { ActivatedRoute, Router } from "@angular/router"
 import { AnimalService } from '../../services/animalservice.service'
 
@@ -7,7 +7,7 @@ import { AnimalService } from '../../services/animalservice.service'
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, OnChanges {
 
   loading: Boolean = true;
   error: Boolean = false;
@@ -15,6 +15,8 @@ export class HomeComponent implements OnInit {
   haveParams: Boolean = false;
 
   imageUrl: String = "https://images.dog.ceo/breeds/terrier-american/n02093428_1439.jpg";
+
+  counter: number = 0;
 
   constructor(
     private animalService: AnimalService,
@@ -29,6 +31,12 @@ export class HomeComponent implements OnInit {
           this.haveParams = true
           this.refreshPage(params["animal"].toLowerCase())
         }
+      }
+
+      this.counter = this.counter + 1
+
+      if(this.counter == 6){
+        this.router.navigate(['/surpresa'])
       }
     });
 
@@ -53,12 +61,16 @@ export class HomeComponent implements OnInit {
     }
   }
 
+  ngOnChanges(){
+    console.log('teste')
+  }
+
   getHomeImage(){
     return this.animalService.getImage()
   }
 
   getMessage(){
-    return this.error ? "Algo errado ocorreu" : "Carregando, fique com este lindo dog"
+    return this.error ? "Algo errado ocorreu" : "Carregando..."
   }
 
   shouldShowMessage(){

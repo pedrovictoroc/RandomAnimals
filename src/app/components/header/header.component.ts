@@ -1,5 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { Router } from "@angular/router"
+import { Router, ActivatedRoute } from "@angular/router"
 
 @Component({
   selector: 'app-header',
@@ -12,13 +12,15 @@ export class HeaderComponent implements OnInit {
   selectedAnimal = new EventEmitter()
 
   constructor(
+    private router: Router,
+    private activatedRoute: ActivatedRoute,
   ) { }
 
   ngOnInit(): void {
   }
 
   navigateToSection(animal: string){
-    this.selectedAnimal.emit(animal);
+    this.router.navigate(['.'], { relativeTo: this.activatedRoute, queryParams: { 'animal': animal }});
   }
 
 }
