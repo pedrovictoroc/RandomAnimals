@@ -1,0 +1,29 @@
+.paginator-title {
+    font-family: 'MontSerrat';
+    font-weight: bold;
+    color: #0747a6;
+
+    text-align: center;
+}
+
+.next-page {
+    border: none;
+    outline: none;
+    background: #FFFFFF;
+    box-shadow: 0px 3px 6px #00000014;
+    border-radius: 8px;
+
+    padding: 12px;
+}
+
+.data-container{
+    
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    background: #F8F8FA;
+
+    padding-bottom: 20px;
+}

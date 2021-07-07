@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { HomeComponent } from './pages/home/home.component';
 import { PaginatorComponent } from './pages/paginator/paginator.component'
+import { FinallyComponent } from './pages/finally/finally.component'
 
 const routes: Routes = [
   {
@@ -12,6 +13,10 @@ const routes: Routes = [
   {
     path: 'surpresa',
     component: PaginatorComponent
+  },
+  {
+    path: 'finalmente',
+    component: FinallyComponent
   }
 ];
 
